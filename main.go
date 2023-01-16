@@ -70,7 +70,6 @@ func Run(filename string) error {
 	_, x = io.WriteString(os.Stdout, result.Inspect()+"\n")
 	defer func() {
 		if x := recover(); x != nil {
-			return nil
 			fmt.Println("SkyLine response => null")
 		}
 	}
