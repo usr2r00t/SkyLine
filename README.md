@@ -18,6 +18,22 @@ Currenty SkyLine has a very small and limited interpreter however despite it not
 
 SkyLine has many ways of allowing the user to full customization of the style within the language, due to this abstract design SkyLine has some pretty interesting ways of writing code. Below are examples and basic documentation on the SkyLine programming language.
 
+# Upcoming in Skyline 
+
+* Linker 
+* Better error system 
+* More color / ANSI / ASCII support
+* Unicode support 
+* Better literal support 
+* Better Boolean support 
+* Better standard statements 
+* Better macro system 
+* Better code system
+* Server 
+* Documentation
+* Local docs 
+* cyber security related base
+
 > Output 
 
 two simple ways to output data in SkyLine are ... 
