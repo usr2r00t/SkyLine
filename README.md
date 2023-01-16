@@ -116,5 +116,18 @@ Like every other language SkyLine carries supports for multiple forms of operati
 
 > Operators
 
+| Operator | Working |
+| -------- | ------- |
+|    +     | yes     |
+|    -     | yes     |
+|    /     | yes     |
+|    *     | yes     |
+|    >     | yes     |
+|    <     | yes     |
+|    ==    | yes     |
+|    !=    | yes     |
+|    >=    | no      |
+|    <=    | no      | 
+
 
 
