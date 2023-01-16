@@ -21,7 +21,7 @@ func main() {
 		Mod.Banner()
 	}
 	if *Mod.SourceFile != "" {
-		if fileext := filepath.Ext(*Mod.SourceFile); fileext == ".css" {
+		if fileext := filepath.Ext(*Mod.SourceFile); fileext == "css" {
 			if err := Run(*Mod.SourceFile); err != nil {
 				fmt.Fprintln(os.Stderr, err)
 				os.Exit(0)
