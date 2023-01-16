@@ -18,6 +18,23 @@ Currenty SkyLine has a very small and limited interpreter however despite it not
 
 SkyLine has many ways of allowing the user to full customization of the style within the language, due to this abstract design SkyLine has some pretty interesting ways of writing code. Below are examples and basic documentation on the SkyLine programming language.
 
+> Output 
+
+two simple ways to output data in SkyLine are ... 
+
+```rs
+println("hello world")
+print("hello world")
+```
+
+there are other ways as well, for example say you declare a variable you can simple just place the variable name and skyline will output it 
+
+```rs
+let x = 10;
+
+x
+```
+
 > Declaring variables 
 
 * About: SkyLine has many ways of defining variables, types include float, string, bool and integer as of 0.0.2. Def keywords consist of `allow, let, cause`
@@ -110,6 +127,50 @@ let result = foo(10);
 print(result);
 ```
 
+> Function arguments 
+
+function arguments are pretty simple as well, with skyline there is no need to put the data type within the function before entering the variable. 
+
+* Simple function arguments 
+
+```rs
+allow x = function(x) {
+  x - x;
+}
+```
+
+* Multiple function arguments 
+
+```rs
+allow x = function(x, y, z, w) {
+      x - y - z * w;
+}
+```
+
+or 
+
+```rs
+allow x = function(x : y : z : w) {
+  x - y - z * w;
+}
+ 
+```
+
+* Advanced function arguments 
+
+```rs
+let subroutine = function(a, b) { 
+      a - b 
+};
+
+let applyFunction = Func(a, b, func) { 
+     func(a, b) 
+};
+
+applyFunction(10, 2, sub);
+```
+
+
 > Data types, arithmatic expressions and boolean operations
 
 Like every other language SkyLine carries supports for multiple forms of operations, conditionals and booleans. 
@@ -187,6 +248,83 @@ let nilval = "";
 ```
 
 nill is not a full fledged data type however in some cases you will see `nil` or `null` pop up within a function call, output statement or whatever it may be that returns NULL.
+
+> Hash maps and arrays 
+
+arrays and hash maps are actually really interesting, arrays and hashes have their own unique data types called HASH and ARR (Array) which can hold any data type within a mash. 
+
+* Simple integer array 
+
+```rs
+allow myarray = [1, 2, 3, 4, 5, 6]
+```
+
+* Simple multi type array 
+
+```rs
+allow myarray = ["data", 1, true, false, 1.0]
+```
+
+* Mashed type array
+
+```rs
+allow MyArray_MIXED = [ 
+  "data",
+  1.15,
+  true,
+  false,
+  Func(data) { print(data) },
+  function(x, y) { x - y }]
+```
+
+* Simple hash map
+
+```rs
+allow hashmap = {
+  "key": "value",
+};
+```
+
+* Mixed type hash map 
+
+```rs
+allow hashmap = {
+  "key": "value",
+  
+  1: "value2",
+  
+  1.9: 1,
+  
+  2: 1.8,
+  
+  true: false,
+  
+}
+```
+
+* Annoyingly stupid hash map but very possible hash map 
+
+```rs
+allow hashmap = {
+    "key": "value",
+  
+  1: "value2",
+  
+  1.9: 1,
+  
+  2: 1.8,
+  
+  true: false,
+  
+  "function" : function(x, y) { x - y},
+  
+  "arr": [1, 2, 3, 4, 5],
+  
+  "hash map within a hash map": { "key" : value },
+  
+  "hash map inception": { "hashmap" : {"hashmap": {"value": function(x, y) { x - y} }}},
+}
+```
 
 > Standard functions 
 
@@ -283,6 +421,8 @@ SkyLine__ this function is a lookup function for any standard function within th
 SkyLine__("USER")
 SkyLine__("OS")
 ```
+
+
 
 
 
