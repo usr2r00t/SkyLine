@@ -57,5 +57,56 @@ SkyLine will tell you there is an error in your statement such as `no parse pref
 Defining a function is like so
 
 ```rs
+allow methodName = function() {
 
+};
+
+#or 
+
+allow methodName = Func() {
+
+};
 ```
+
+functions are pretty simple, it is important to note that while semicolons are optional it is suggested to use them.
+
+* FUNCTION RETURN AND OUTPUT 
+
+* Note: When calling a function in SkyLine you can do multiple things, you can use the `ret` or `return` keywords to return a value or you can just call the function and have it output the variable by simply placing the variable in the function like so.
+
+```rs
+allow foo = function(x) {
+    x - x;
+}
+
+let result = foo(10);
+
+print(result);
+```
+
+result will hold the output to foo even tho return or ret keywords are not used, as with most keywords in this language **MOST** SkyLine allows you to op out of most tokens.
+
+the following use ret and return statements 
+
+```rs
+allow foo = function(x) {
+    ret x - x;
+}
+
+let result = foo(10);
+
+print(result);
+```
+
+return 
+
+```rs
+allow foo = function(x) {
+    ret x - x;
+}
+
+let result = foo(10);
+
+print(result);
+```
+
