@@ -72,6 +72,6 @@ func Run(filename string) error {
 		if x := recover(); x != nil {
 			fmt.Println("SkyLine response => null")
 		}
-	}
+	}()
 	return x
 }
