@@ -110,3 +110,11 @@ let result = foo(10);
 print(result);
 ```
 
+> Data types, arithmatic expressions and boolean operations
+
+Like every other language SkyLine carries supports for multiple forms of operations, conditionals and booleans. 
+
+> Operators
+
+
+
