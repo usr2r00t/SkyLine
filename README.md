@@ -33,6 +33,8 @@ SkyLine has many ways of allowing the user to full customization of the style wi
 * Documentation
 * Local docs 
 * cyber security related base
+* Format identifiers
+* Format statements
 
 > Output 
 
