@@ -68,5 +68,11 @@ func Run(filename string) error {
 		return nil
 	}
 	_, x = io.WriteString(os.Stdout, result.Inspect()+"\n")
+	defer func() {
+		if x := recover(); x != nil {
+			return nil
+			fmt.Println("SkyLine response => null")
+		}
+	}
 	return x
 }
