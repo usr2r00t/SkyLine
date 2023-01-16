@@ -1,0 +1,18 @@
+Make sure we add the following 
+
+Larger integer parsing 
+Byte parsing 
+standard file system manipulation or file manipulation 
+integer, string, byte, bool, float builtin functions
+remove the mandatory () around calling functions and adding function params 
+add elif
+add better error system
+add networking system 
+add web server for documentation
+add more input statement support
+add Command Line Arguments
+add text and data manipulation statements
+test on windows 
+add more standard symbols
+add settings support for YAML and JSON
+add linker
