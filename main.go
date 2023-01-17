@@ -31,14 +31,13 @@ func main() {
 
 NoFlag = Run SkyLine's console
 		`
-
 		fmt.Println(list)
 		os.Exit(0)
 	}
-	if *Mod.Bnn {
-		Mod.Banner()
-	}
 	if *Mod.SourceFile != "" {
+		if *Mod.Bnn {
+			Mod.Banner()
+		}
 		if fileext := filepath.Ext(*Mod.SourceFile); fileext == ".csc" {
 			if err := Run(*Mod.SourceFile); err != nil {
 				fmt.Fprintln(os.Stderr, err)
@@ -48,6 +47,7 @@ NoFlag = Run SkyLine's console
 			fmt.Println("Woah there buddy, sorry but that file type is not allowed, files must end in (.csc) not -> ", fileext)
 		}
 	} else {
+		fmt.Println("\x1b[H\x1b[2J\x1b[3J")
 		Mod.Banner()
 		Mod.Start(os.Stdin, os.Stdout)
 		return
@@ -55,6 +55,7 @@ NoFlag = Run SkyLine's console
 }
 
 func Run(filename string) error {
+	Mod.FileCurrent.New(filename)
 	f, x := os.Open(filename)
 	if x != nil {
 		fmt.Println("Sorry bro | the SkyLine interperter can not read the file, it may not exist -> ", x)
