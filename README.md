@@ -464,7 +464,7 @@ import("file.csc")
 println(name)
 ```
 
-** Block execution **
+* Block execution
 
 Block execution also known as Carrier is a statement in SkyLine that allows you to import another file but rather execute it than importing data from the file. For example say you have two files sub.csc and second.csc which are files you want to execute depending on an input in main.csc you can run it like so 
 
