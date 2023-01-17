@@ -440,7 +440,51 @@ SkyLine__("USER")
 SkyLine__("OS")
 ```
 
+* Importing files 
 
+Importing files right now is a bit unchecked and is still extremely new, it has some bugs but it is still useable. If you want to import a file ensure the file ends in .csc and the import is not a new keyword. Basically SkyLine will find any file with an import keyword or keyword to import a file and transfer that data to an output file and execute it. Right now this "linker" if you can even call it that is a bit wack so respect it. 
+
+**importing**
+
+there are three different keywords you can use to import files, one file can be imported at a time with `require, import or include` these files can be imported and once imported your program will continue to execute. There is no file target or traceback system that is accurate so do not expect to be well pleased.
+
+EXAMPLE 
+
+**file.csc**
+
+```rs
+let name = USER_("username")
+```
+
+**main.csc**
+
+```rs
+import("file.csc")
+
+println(name)
+```
+
+** Block execution **
+
+Block execution also known as Carrier is a statement in SkyLine that allows you to import another file but rather execute it than importing data from the file. For example say you have two files sub.csc and second.csc which are files you want to execute depending on an input in main.csc you can run it like so 
+
+```rs
+let choices = "a, b"
+println("choose one -> " + choices)
+
+let UserInput = input("Console>>", "n")
+
+if UserInput == "a" {
+    carry|"sub.csc"| 
+}
+
+if UserInput == "b" {
+    carry|"second.csc"|
+}
+
+```
+
+Carry stops the parser from parsing any other tokens or functions or literals within the current file being run and will execute and start parsing values in that file as well. It is important to note when and how this function will come in handy. Maybe you have a sub setup program which depends on the OS and you want skyline to check for data before given a conditional. Anyway its a pretty basic function.
 
 
 
