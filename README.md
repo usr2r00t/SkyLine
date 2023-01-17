@@ -20,7 +20,7 @@ SkyLine has many ways of allowing the user to full customization of the style wi
 
 # Upcoming in Skyline 
 
-* Linker 
+* A better Linker 
 * Better error system 
 * More color / ANSI / ASCII support
 * Unicode support 
@@ -31,7 +31,7 @@ SkyLine has many ways of allowing the user to full customization of the style wi
 * Better code system
 * Server 
 * Documentation
-* Local docs 
+* Local documentation
 * cyber security related base
 * Format identifiers
 * Format statements
